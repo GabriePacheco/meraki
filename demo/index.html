@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title class="nombre"></title>
+	<link rel="stylesheet" type="text/css" href="../css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+    <script  src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.7.0/firebase-messaging.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+    <script  src="/__/firebase/init.js"></script>
+    <script type="text/javascript" src="../js/basefunctions.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/jquery.js"></script>
+	<script src="settings.js"></script>
+	<script src="../js/menu.js"></script>
+	<script src="../js/pagina.js"></script>
+	<script src="../js/tablas.js"></script>
+	<script src="../js/index.js"></script>
+</head>
+<body>
+	<div id="app" class="colorF">
+		<div id = "start" class="row pageApp">
+			<div class="valign-wrapper center-align">		
+			  <div class="col s12">
+				  <div class="preloader-wrapper big active">
+				    <div class="spinner-layer spinner-blue-only">
+				      <div class="circle-clipper left">
+				        <div class="circle"></div>
+				      </div><div class="gap-patch">
+				        <div class="circle"></div>
+				      </div><div class="circle-clipper right">
+				        <div class="circle"></div>
+				      </div>
+				    </div>
+				  </div>	
+				  <p>Cargando...</p>
+			  </div>
+			</div>
+		</div>
+		<div id = "login" class="row pageApp hide">
+			<div class="valign-wrapper center-align" >
+				<div class="col s12">
+				  <div class="row ">
+				  	<div class="col m4 offset-m4 s12 color"><h4 class="nombre"></h4></div>
+				  	<div class="col m4 offset-m4 s12 white">			  		
+					    <form id = "loginer" class="col s12 ">
+							
+					      <div class="row">
+					        <div class="input-field col s12">
+					          <input id="email" type="email" class="validate" required>
+					          <label for="email">Email</label>
+					        </div>
+					      </div>
+
+					      <div class="row">
+					        <div class="input-field col s12">
+					          <input id="password" type="password" class="validate" required >
+					          <label for="password">Password</label>
+					        </div>
+					      </div>
+					      <div class="row">
+					      	<button type="submit" class="btn btn-lg col s12 color disabled">Entrar<span class="right"><i class="material-icons">send</i></span></button>
+					      </div>
+					    </form>
+				    </div>
+				  </div>					
+				</div> 
+			</div>
+		</div>
+		<div id = "home" class="row pageApp hide">
+			<div id ="contenedor_menu" class="col s2 color center-align">
+				<strong class="nombre center-align"></strong>
+				<div class="row">
+					<a href="#" action = "menu" data-url="userInLine">
+						<div id="user" class="col s12">
+							<div class="col m4 s12">
+								<img  src="img/generic-user.png" class="responsive-img circle userInlineImg">
+							</div>
+							<div class="col m8 s12 userInlineName truncate hide-only-on-small"></div>
+						</div>
+					</a>
+				</div>
+				<div id = "menu" class="row">
+				
+				</div>
+				
+			</div>
+			<div id ="contenedor_paginas" class="col s10"></div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

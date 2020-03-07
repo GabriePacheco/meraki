@@ -1,0 +1,29 @@
+[debug] [2020-01-29T17:28:12.302Z] ----------------------------------------------------------------------
+[debug] [2020-01-29T17:28:12.317Z] Command:       C:\Users\gpacheco\Desktop\Gpacheco\node\node.exe C:\Users\gpacheco\Desktop\Gpacheco\node\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-01-29T17:28:12.317Z] CLI Version:   7.11.0
+[debug] [2020-01-29T17:28:12.317Z] Platform:      win32
+[debug] [2020-01-29T17:28:12.317Z] Node Version:  v12.14.1
+[debug] [2020-01-29T17:28:12.380Z] Time:          Wed Jan 29 2020 12:28:12 GMT-0500 (GMT-05:00)
+[debug] [2020-01-29T17:28:12.380Z] ----------------------------------------------------------------------
+[debug] [2020-01-29T17:28:12.380Z] 
+[debug] [2020-01-29T17:28:12.473Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-29T17:28:12.473Z] > authorizing via signed-in user
+[debug] [2020-01-29T17:28:12.473Z] [iam] checking project merakifistness for permissions ["firebase.projects.get"]
+[debug] [2020-01-29T17:28:12.473Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-29T17:28:12.473Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-29T17:28:12.786Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-29T17:28:12.817Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/merakifistness:testIamPermissions  
+
+[debug] [2020-01-29T17:28:13.662Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-29T17:28:13.662Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/merakifistness  
+ 
+[debug] [2020-01-29T17:28:14.207Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\xampp\htdocs\meraki'...
+[info] 
+[debug] [2020-01-29T17:28:14.213Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/merakifistness/webApps/-/config  
+ 
+[debug] [2020-01-29T17:28:14.829Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000

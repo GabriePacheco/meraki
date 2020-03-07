@@ -1,0 +1,28 @@
+#app{
+	overflow: hidden;
+	max-height:  100%;
+	min-height: 100%;
+}
+.pageApp{
+	height: 100% !important;
+}
+#login .valign-wrapper, #start .valign-wrapper{
+	height: 100% !important;
+}
+#contenedor_menu {
+	height: 100% !important;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#contenedor_menu a{
+	color : #ffffff;
+}
+
+#menu a{
+	color: #ffffff;
+}
+.pages{
+	height: 100% !important;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
