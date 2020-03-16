@@ -6,7 +6,6 @@ class Pagina {
 		this.path= set.path;
 		this.componentes=  set.componentes;
 		this.crear();
-
 	}
 	crear(){
 		let contenedor =  document.createElement('div');
@@ -17,6 +16,7 @@ class Pagina {
 		titulo.id = "page_titulo" +this.id;
 		titulo.innerHTML= this.nombre;
 		contenedor.append(titulo);
+		
 		if (this.componentes){
 			let componentes = document.createElement("div");
 			componentes.setAttribute("class", "row");
@@ -25,10 +25,23 @@ class Pagina {
 				tablas.setAttribute("class", "col s12");
 				this.componentes.tablas.forEach(async (item) => {					
 					let tab = new Tabla(item);
-				 	tablas.append(await tab.getTabla());
-				 	/*tab.reSetTable();							*/
+				 	tablas.append(await tab.getTabla());		 	
 				})
 				componentes.append(tablas);			
+			}
+
+			if (this.componentes.formularios){
+				let formularios = document.createElement("div");
+				formularios.setAttribute("class", "col s12");
+				this.componentes.formularios.forEach((item)=>{
+					let forms1 = new Formulario(item);
+
+					forms1.getHtml((e)=>{
+						formularios.append(e);
+					})
+
+				})
+				componentes.append(formularios);	
 			}
 			contenedor.append(componentes);
 

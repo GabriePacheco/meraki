@@ -38,21 +38,7 @@ $(document).ready(function(){
 		})
 	});
 
-	//3.- Gestion de la mesajeria 
-	function mensajeria (code){
-		let mensajes ={
-			'auth/wrong-password': ["La contraseña ingresada no es correcta", "error", "red-text"],
-			'auth/user-not-found': ["El usuario ingresado no fue encontrado", "error", "red-text"],
-			'auth/login-ok': ["Listo! la comunicación comensara enseguida. ", "done_outline", "green-text"]
-		}
-		let mensaje;
-		if (! mensajes[code]){
-			mensaje = `<span>Error desconocido <i class='material-icons  red'>error</i></span>`	
-		}else{
-			mensaje = `<span>${mensajes[code][0]}<i class='material-icons ${mensajes[code][2]}'>${mensajes[code][1]}</i></span>`	
-		}	
-		M.toast({html: mensaje })
-	}
+
 
 		//6.- controlar los enlaces
 		$("a").click(function (e){
@@ -104,3 +90,22 @@ var cargarPagina = function (url){
 	$("#contenedor_paginas").html(pag.getdraw())
 
 }
+
+	//3.- Gestion de la mesajeria 
+	function mensajeria (code){
+		let mensajes ={
+			'auth/wrong-password': ["La contraseña ingresada no es correcta", "error", "red-text"],
+			'auth/user-not-found': ["El usuario ingresado no fue encontrado", "error", "red-text"],
+			'auth/login-ok': ["Listo! la comunicación comensara enseguida. ", "done_outline", "green-text"],
+			'guardar/ok':["Listo ! los datos se guardaron con exito. ", "done_ouyline", "green-text"],
+			'guardar/fall': ["Oooh no ! ", 'ocurio un error al guardar los datos', "green-text"]
+
+		}
+		let mensaje;
+		if (! mensajes[code]){
+			mensaje = `<span>Error desconocido <i class='material-icons  red'>error</i></span>`	
+		}else{
+			mensaje = `<span>${mensajes[code][0]}<i class='material-icons ${mensajes[code][2]}'>${mensajes[code][1]}</i></span>`	
+		}	
+		M.toast({html: mensaje })
+	}
